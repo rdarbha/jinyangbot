@@ -84,20 +84,19 @@ def index():
 def test():
     return 'Hello world test'
 
-@app.route('/jinyang', methods=["GET", "POST"])
-def jinyang():
+# @app.route('/jinyang', methods=["GET", "POST"])
+# def jinyang():
 
-    if debug:
-        print(request.form)
+#     if debug:
+#         print(request.form)
 
-    try:
-        # First parse the inbound slack message and get a simple dict
-        slack_dict = parse_slack_message(request.form)
+#     try:
+#         # First parse the inbound slack message and get a simple dict
+#         slack_dict = parse_slack_message(request.form)
 
-        output = slack_dict["text"]
+#         output = slack_dict["text"]
 
-    # return generate_slack_response(output)
-    return output
+#     return generate_slack_response(output)
 
 if __name__ == '__main__':
     # app.run(debug=True, host='0.0.0.0')

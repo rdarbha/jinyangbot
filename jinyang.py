@@ -109,8 +109,8 @@ def jinyang():
 
     # output = return_quote(quote_option)
     quote_option = {
-        1 : "Erlich Bachman, this is you as an old man. I'm ugly and I'm dead. Alone."
-        2 : "Eric Bachman, is your refrigerator running? This is Mike Hunt."
+        1 : "Erlich Bachman, this is you as an old man. I'm ugly and I'm dead. Alone.",
+        2 : "Eric Bachman, is your refrigerator running? This is Mike Hunt.",
         3 : "Eric Bachman, this is your mom, and you, you are not my baby. "
     }
 

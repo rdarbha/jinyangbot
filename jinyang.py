@@ -105,16 +105,23 @@ def jinyang():
 
 #     return generate_slack_response(output)
 
-    # quote_option = random.randint(1, 3)
+    quote_option = random.randint(1, 3)
+
+    if quote_option == 1:
+        output = "Erlich Bachman, this is you as an old man. I'm ugly and I'm dead. Alone."
+    elif quote_option == 2:
+        output = "Eric Bachman, is your refrigerator running? This is Mike Hunt."
+    elif quote_option == 3:
+        output = "Eric Bachman, this is your mom, and you, you are not my baby. "
 
     # output = return_quote(quote_option)
-    quote_option = {
-        1 : "Erlich Bachman, this is you as an old man. I'm ugly and I'm dead. Alone.",
-        2 : "Eric Bachman, is your refrigerator running? This is Mike Hunt.",
-        3 : "Eric Bachman, this is your mom, and you, you are not my baby. "
-    }
+    # quote_option = {
+    #     1 : "Erlich Bachman, this is you as an old man. I'm ugly and I'm dead. Alone.",
+    #     2 : "Eric Bachman, is your refrigerator running? This is Mike Hunt.",
+    #     3 : "Eric Bachman, this is your mom, and you, you are not my baby. "
+    # }
 
-    output = quote_option[random.randint(1,3)]
+    # output = quote_option[random.randint(1,3)]
 
     return jsonify({"response_type" : "in_channel", "text" : output})
 

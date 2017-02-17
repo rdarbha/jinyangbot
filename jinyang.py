@@ -96,7 +96,8 @@ def jinyang():
 
         output = slack_dict["text"]
 
-    return generate_slack_response(output)
+    # return generate_slack_response(output)
+    return output
 
 if __name__ == '__main__':
     # app.run(debug=True, host='0.0.0.0')

@@ -1,6 +1,6 @@
 {
-  "name": "Slack Dicebot",
-  "description": "A Slack slash command bot to roll dice",
-  "repository": "https://github.com/plumbis/python-slack-dicebot",
-  "keywords": ["python", "slack", "dicebot", "slash command", "slackbot"]
+  "name": "Slack Jinyangbot",
+  "description": "A Slack slash command to summon jinyang",
+  "repository": "https://github.com/rdarbha/jinyangbot",
+  "keywords": ["python", "slack", "jinyang", "slash command", "slackbot"]
 }

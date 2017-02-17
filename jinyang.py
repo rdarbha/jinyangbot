@@ -6,7 +6,7 @@ import traceback
 
 app = Flask(__name__)
 
-debug = False
+debug = True
 
 def parse_slack_message(slack_message):
     '''

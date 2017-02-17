@@ -97,7 +97,7 @@ def jinyang():
 #         output = slack_dict["text"]
 
 #     return generate_slack_response(output)
-    return jsonify({"response_type" : "in_channel", "test":'jinyang'})
+    return jsonify({"response_type" : "in_channel", "text" : "jinyang"})
 
 if __name__ == '__main__':
     # app.run(debug=True, host='0.0.0.0')

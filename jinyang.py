@@ -98,10 +98,6 @@ def jinyang():
 
     return generate_slack_response(output)
 
-
-
-    return generate_slack_response(output)
-
 if __name__ == '__main__':
     # app.run(debug=True, host='0.0.0.0')
     app.run()

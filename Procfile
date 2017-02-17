@@ -1,1 +1,1 @@
-web: node app
+web: gunicorn jinyang:app

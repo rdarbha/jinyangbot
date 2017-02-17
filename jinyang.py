@@ -114,7 +114,7 @@ def jinyang():
         3 : "Eric Bachman, this is your mom, and you, you are not my baby. "
     }
 
-    output = options[random.randint(1,3)]
+    output = quote_options[random.randint(1,3)]
 
     return jsonify({"response_type" : "in_channel", "text" : output})
 

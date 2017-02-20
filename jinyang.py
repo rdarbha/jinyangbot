@@ -84,7 +84,7 @@ def return_quote(quote_option):
         2 : "NAME, is your refrigerator running? This is Mike Hunt.",
         3 : "NAME, this is your mom, and you, you are not my baby. ",
         4 : "Yes, Japanese people racist. They are horrible.",
-        5 : "NAME, he started crying in Taco Bell. He tried to blame the taco sauce."
+        5 : "NAME, he started crying in Taco Bell. He tried to blame the taco sauce.",
         6 : "Yes. Which is for burning?"
     }[quote_option]
 

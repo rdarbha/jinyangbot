@@ -80,9 +80,12 @@ def generate_slack_response(text, in_channel=True):
 
 def return_quote(quote_option):
     return {
-        1 : ", this is you as an old man. I'm ugly and I'm dead. Alone.",
-        2 : ", is your refrigerator running? This is Mike Hunt.",
-        3 : ", this is your mom, and you, you are not my baby. "
+        1 : "NAME, this is you as an old man. I'm ugly and I'm dead. Alone.",
+        2 : "NAME, is your refrigerator running? This is Mike Hunt.",
+        3 : "NAME, this is your mom, and you, you are not my baby. ",
+        4 : "Yes, Japanese people racist. They are horrible.",
+        5 : "NAME, he started crying in Taco Bell. He tried to blame the taco sauce."
+        6 : "Yes. Which is for burning?"
     }[quote_option]
 
 @app.route('/', methods=["GET", "POST"])
@@ -101,9 +104,9 @@ def jinyang():
     quote_option = random.randint(1, 3)
 
     if len(slack_dict["text"]) != 0:
-        output = slack_dict["text"] + return_quote(quote_option)
+        output = return_quote(quote_option).replace("NAME",slack_dict["text"])
     else:
-        output = "Erlich Bachman" + return_quote()
+        output = return_quote(quote_option).replace("NAME","Erlich Bachman")
 
     if debug:
         print(request.form)

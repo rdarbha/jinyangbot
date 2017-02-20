@@ -96,36 +96,16 @@ def test():
 @app.route('/jinyang', methods=["GET", "POST"])
 def jinyang():
 
+    slack_dict = parse_slack_message(request.form)
+
     quote_option = random.randint(1, 3)
     output = return_quote(quote_option)
-    # quote_option = {
-    #     1 : "Erlich Bachman, this is you as an old man. I'm ugly and I'm dead. Alone.",
-    #     2 : "Eric Bachman, is your refrigerator running? This is Mike Hunt.",
-    #     3 : "Eric Bachman, this is your mom, and you, you are not my baby. "
-    # }
 
     if debug:
         print(request.form)
 
-#     try:
-#         # First parse the inbound slack message and get a simple dict
-#         slack_dict = parse_slack_message(request.form)
-#         output = slack_dict["text"]
-#     return generate_slack_response(output)
-
-
-
-    # if quote_option == 1:
-    #     output = "Erlich Bachman, this is you as an old man. I'm ugly and I'm dead. Alone."
-    # elif quote_option == 2:
-    #     output = "Eric Bachman, is your refrigerator running? This is Mike Hunt."
-    # elif quote_option == 3:
-    #     output = "Eric Bachman, this is your mom, and you, you are not my baby. "
-
-
-    # output = quote_option[random.randint(1,3)]
-
-    return jsonify({"response_type" : "in_channel", "text" : output})
+    # return jsonify({"response_type" : "in_channel", "text" : output})
+    return generate_slack_response(output, in_channel=True)
 
 if __name__ == '__main__':
     # app.run(debug=True, host='0.0.0.0')

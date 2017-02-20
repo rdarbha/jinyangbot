@@ -80,9 +80,9 @@ def generate_slack_response(text, in_channel=True):
 
 def return_quote(quote_option):
     return {
-        1 : "Erlich Bachman, this is you as an old man. I'm ugly and I'm dead. Alone.",
-        2 : "Eric Bachman, is your refrigerator running? This is Mike Hunt.",
-        3 : "Eric Bachman, this is your mom, and you, you are not my baby. "
+        1 : ", this is you as an old man. I'm ugly and I'm dead. Alone.",
+        2 : ", is your refrigerator running? This is Mike Hunt.",
+        3 : ", this is your mom, and you, you are not my baby. "
     }[quote_option]
 
 @app.route('/', methods=["GET", "POST"])
@@ -99,7 +99,11 @@ def jinyang():
     slack_dict = parse_slack_message(request.form)
 
     quote_option = random.randint(1, 3)
-    output = slack_dict["text"] + return_quote(quote_option)
+
+    if len(slack_dict["text"]) != 0:
+        output = slack_dict["text"] + return_quote(quote_option)
+    else:
+        output = "Erlich Bachman" + return_quote()
 
     if debug:
         print(request.form)

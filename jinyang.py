@@ -99,7 +99,7 @@ def jinyang():
     slack_dict = parse_slack_message(request.form)
 
     quote_option = random.randint(1, 3)
-    output = return_quote(quote_option)
+    output = slack_dict["text"] + return_quote(quote_option)
 
     if debug:
         print(request.form)
